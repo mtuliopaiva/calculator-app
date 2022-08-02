@@ -1,16 +1,42 @@
 body{
-    background: #000000;
+    background: #FFFFFF;
 }
 .meuTitulo{
     color: #FFFFFF;
     text-align: center;
+    font-size: 3rem;
 }
 .calculadora{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: top;
+    height: 100vh;
+    width: fit-content;
+}
+.display{
+    width: 100%;
+    text-align:  center;
+    font-size: 1.875rem;
+}
+.teclado{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5%;
-
+}
+.digito, .digito-especial, .digito-operacao{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #333333;
+    
+    color: #FFFFFF;
+}
+.digito-operacao{
+    background: #FF9201;
+    color: #FFFFFF;
+}
+.digito-especial{
+    background: #A5A5A5;
+    color: #FFFFFF;
 }
