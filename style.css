@@ -6,48 +6,53 @@ body{
     text-align: center;
     font-size: 3rem;
 }
-/*.calculadora{
+.calculadora{
     background: #000000;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    height: 100vh;
-    width: fit-content;
-}*/
-.display{
     width: 100%;
-    text-align:  center;
-    font-size: 1.875rem;
-    
 }
-/*.teclado{
-    margin-top: 3%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1%;
-}*/
-.teclado{
-    justify-content: center;
+.display{
+    background: #000000;
+    color:#FFFFFF;
     width: 20%;
-    background: #e5e5e5; /*Cinza pouco escuro para fundo da tela*/
-    display: flex; /*Elementos alinhados um ao lado do outro*/
-    flex-wrap: wrap; /*Quebra automaticamente os elementos de linhas e colunas */
-    padding: 5rem 2rem;
+    text-align:  right;
+    font-size: 1.875rem;
 }
-.digito, .digito-especial, .digito-operacao{
+.display::placeholder{
+    color: #FFFFFF;
+}
+
+.teclado{
+    padding: .6rem .6rem;
+    width: 20%;
+     /*Cinza pouco escuro para fundo da tela*/
+    border-radius: 15%;
+}
+.digito{
+    font-size: 1rem;
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
     cursor: pointer;
     background: #333333;
     color: #FFFFFF;
-    margin: 2% 2%;
+
+    opacity: 1;
+    box-shadow: 1px 1px 1px 0 #000000;
+    
 }
-.digito-operacao{
+.digito:nth-child(1), .digito:nth-child(2), .digito:nth-child(3){
+    background: #A5A5A5;
+    color: #FFFFFF;
+}
+.digito:nth-child(4), .digito:nth-child(8),.digito:nth-child(12), .digito:nth-child(16), .digito:nth-child(20){
     background: #FF9201;
     color: #FFFFFF;
 }
-.digito-especial{
-    background: #A5A5A5;
-    color: #FFFFFF;
+.digito:nth-child(17){
+    border-radius: 45%;
+    width: 6rem;   
+}
+.digito > span{
+    position: relative;
+    right: 2rem;
 }
