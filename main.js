@@ -5,35 +5,41 @@ const display = document.querySelector('.display');
 for(let i=0 ; i<digitos.length ;i++){
 
     const tecla = digitos[i];
+    
 
     tecla.onclick = function() {
+        
         var operacao;
-        var valorAnterior;
-        var valorNovo;
+        var primeiroValor;
+        var segundoValor;
         var resultado;
 
-        if((tecla.value != 'C' && (tecla.value != '+/-') && (tecla.value != '%') && (tecla.value != '÷') && (tecla.value != 'x') && (tecla.value != '-') && (tecla.value != '+') && (tecla.value != '='))){
         display.value = display.value + tecla.value;
-        valorAnterior=display.value;
-        console.log(valorAnterior);
-        
-        }
+        primeiroValor = display.value;
 
         if(tecla.value == '+'){
-            display.value ='';
-
-            if((tecla.value != 'C' && (tecla.value != '+/-') && (tecla.value != '%') && (tecla.value != '÷') && (tecla.value != 'x') && (tecla.value != '-') && (tecla.value != '+') && (tecla.value != '='))){
-                display.value = display.value + tecla.value;
-                valorNovo=display.value;
-                console.log(valorAnterior);
-                console.log(valorNovo);
-            }   
+            primeiroValor = primeiroValor.splice(1, 2, 'banana');
+            console.log(primeiroValor);
         }
+
+        if(tecla.value == 'C'){
+            clear();
     }
-    function adicionar(valorAnterior, valorNovo){
-        resultado = parseInt(valorAnterior) + parseInt(valorNovo);
-        
-        
-        
+
+        if(tecla.value == '+'){
+                
+                segundoValor = display.value;
+        }
+                
+    }
+
+
+
+
+    function clear(){
+        display.value = '';
     }
 }
+
+
+/*resultado = parseFloat(primeiroValor) + parseFloat(segundoValor);     */   
