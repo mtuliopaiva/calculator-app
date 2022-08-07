@@ -1,45 +1,43 @@
-const digitos = document.querySelectorAll('.digito');
-const display = document.querySelector('.display');
-
-
-for(let i=0 ; i<digitos.length ;i++){
-
-    const tecla = digitos[i];
-    
-
-    tecla.onclick = function() {
-        
-        var operacao;
-        var primeiroValor;
-        var segundoValor;
-        var resultado;
-
-        display.value = display.value + tecla.value;
-        primeiroValor = display.value;
-
-        if(tecla.value == '+'){
-            primeiroValor = primeiroValor.splice(1, 2, 'banana');
-            console.log(primeiroValor);
-        }
-
-        if(tecla.value == 'C'){
-            clear();
+function inserir(num){
+    if(numero ==""){
+        var numero = document.getElementById('display').innerHTML;
+        document.getElementById('display').innerHTML = parseFloat(numero) + parseFloat(num);
     }
+    var numero = document.getElementById('display').innerHTML;
+    document.getElementById('display').innerHTML = numero + num;
+}
 
-        if(tecla.value == '+'){
-                
-                segundoValor = display.value;
-        }
-                
-    }
+function limpar() {
+    document.getElementById('display').innerHTML = "0"
+}
 
-
-
-
-    function clear(){
-        display.value = '';
+function calcular()
+{
+    var resultado = document.getElementById('display').innerHTML;
+    if(resultado){
+        document.getElementById('display').innerHTML = eval(resultado);
+        console.log(resultado);
     }
 }
 
 
+
+
+
+
+
+
+
+
+/*for(let i=0 ; i<digitos.length ;i++){
+
+    const tecla = digitos[i];
+
+
+}
+
+/*Todas as funções*/ 
+  /* function clear(){
+        display.value = '';
+    }
 /*resultado = parseFloat(primeiroValor) + parseFloat(segundoValor);     */   
