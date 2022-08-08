@@ -1,25 +1,19 @@
 function inserir(num){
-    if(numero ==""){
-        var numero = document.getElementById('display').innerHTML;
-        document.getElementById('display').innerHTML = parseFloat(numero) + parseFloat(num);
-    }
     var numero = document.getElementById('display').innerHTML;
     document.getElementById('display').innerHTML = numero + num;
+    console.log(display);
 }
 
 function limpar() {
-    document.getElementById('display').innerHTML = "0"
+    document.getElementById('display').innerHTML = ""
 }
 
-function calcular()
-{
+function calcular(){
     var resultado = document.getElementById('display').innerHTML;
     if(resultado){
         document.getElementById('display').innerHTML = eval(resultado);
-        console.log(resultado);
     }
 }
-
 
 
 

@@ -13,11 +13,11 @@
     <section class="calculadora">
 
         
-        <p id="display">0</p>
+        <p id="display"></p>
         <div class="teclado">
             <button class="digito" onclick="limpar()">C</button>
-            <button class="digito" value="+/-">+/-</button>
-            <button class="digito" value="%">%</button>
+            <button class="digito" value="+/-" onclick="calcular(inserir('*-1'))">+/-</button>
+            <button class="digito" value="%" onclick="calcular(inserir('/100'))">%</button>
             <button class="digito" value="÷" onclick="inserir('/')">÷</button>
 
             <button class="digito" value="7" onclick="inserir('7')">7</button>
@@ -37,7 +37,7 @@
 
             <button class="digito" value="0" onclick="inserir('0')"><span>0</span></button>
             <button class="digito" value="," onclick="inserir('.')">,</button>
-            <button class="digito" value="=" data-operador="igualdade" onclick="calcular()">=</button>
+            <button class="digito" value="=" onclick="calcular()">=</button>
         </div>
 
     </section>
