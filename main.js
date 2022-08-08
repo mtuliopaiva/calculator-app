@@ -1,7 +1,7 @@
 function inserir(num){
     var numero = document.getElementById('display').innerHTML;
     document.getElementById('display').innerHTML = numero + num;
-    console.log(display);
+    
 }
 
 function limpar() {
@@ -14,7 +14,7 @@ function calcular(){
         document.getElementById('display').innerHTML = eval(resultado);
     }
 }
-
+console.log(display);
 
 
 
