@@ -9,8 +9,8 @@
 }
 #display{
   font-size: 1.675rem;
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #000000;
+  color: #FFFFFF;
   text-align: right;
   display: block; /*Para alinhar um input*/
   margin: 0 auto; /*Para alinhar um input*/

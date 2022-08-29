@@ -1,20 +1,15 @@
 const tela = document.querySelector("#display");
 const tec = document.querySelector('.teclado')
+const calculator = document.querySelector('.calculadora')
 
-const limpar = document.querySelector(".clear");
-const inverte = document.querySelector(".invert");
-const porcentagem = document.querySelector(".percentage");
-const operacao = document.querySelectorAll(".operator");
-const dec = document.querySelector(".decimal");
-const igual = document.querySelector(".equal");
 
 
 tec.addEventListener('click', event => {
     if (event.target.matches('button')) {
-        const key = event.target; // Evento.target
-        const action = key.dataset.action;
-        const keyContent = key.textContent;
-        const displayedNum = tela.textContent;
+        const key = event.target; // evento.target
+        const action = key.dataset.action; // data atributtes
+        const keyContent = key.textContent; //conteudo do teclado clicado
+        const displayedNum = tela.textContent; //conteudo do display
 
         if(!action) {
             if (displayedNum === '0') {
@@ -25,24 +20,50 @@ tec.addEventListener('click', event => {
             }
           }
         if(action == 'clear'){
-            console.log('clear key!');
+            tela.textContent = "0";
           }
 
         if(action == 'invert'){
-            console.log('invert key!');
+            let result = tela.textContent*(-1);
+            tela.textContent = result;
           }
         if(action == 'percentage'){
-            console.log('percentage key!');
+            let result = tela.textContent/100;
+            tela.textContent = result;
           }
         if(action === 'plus' ||action === 'minus' ||action === 'divide' ||action === 'multiply'){
-            console.log('operator key!');
+            calculator.dataset.firstValue = displayedNum; //criado data atributes first value
+            calculator.dataset.operator = action;
+            tela.textContent = "0";
         }
         if(action == 'calculate'){
-            console.log('equal key!');
-        }
+            const firstValue = calculator.dataset.firstValue;
+            const operator = calculator.dataset.operator;
+            const secondValue = displayedNum;
+
+            if(operator =='plus'){
+                let result = parseFloat(firstValue) + parseFloat(secondValue);
+                tela.textContent = result;
+            }
+            if(operator =='minus'){
+                let result = parseFloat(firstValue) - parseFloat(secondValue);
+                tela.textContent = result;
+            }
+            if(operator =='multiply'){
+                let result = parseFloat(firstValue)*parseFloat(secondValue);
+                tela.textContent = result;
+            }
+            if(operator =='divide'){
+                let result = parseFloat(firstValue)/parseFloat(secondValue);
+                tela.textContent = result;
+            }
+            
+          }
         if(action == 'decimal'){
             console.log('decimal key!');
+            tela.textContent = displayedNum + '.';
         }
 
     }
+
    })
