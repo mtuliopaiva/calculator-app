@@ -1,53 +1,26 @@
-main{
-    background: #FFFFFF;
-}
+/*Titulo 2 rem*/
+/*display 1.675 rem rem*/
+/*display 1.325 rem rem*/
+
+
 .meuTitulo{
-    color: #000000;
     text-align: center;
-    font-size: 3rem;
-}
-.calculadora{
-    background: #FFFFFF;
+    font-size: 2rem;
 }
 #display{
-    margin-left: 20%;
-    width: 100%;
-    height: 30px;
-    font-size: 1.675rem;
-    color: #FFFFFF;
+  font-size: 1.675rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  text-align: right;
+  display: block; /*Para alinhar um input*/
+  margin: 0 auto; /*Para alinhar um input*/
+  width: 25%;
 }
 .teclado{
-    margin: auto;
-    width: 20%;
-     /*Cinza pouco escuro para fundo da tela*/
-    border-radius: 15%;
-    background: #000000;
-}
-.digito{
-    font-size: 1rem;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    cursor: pointer;
-    background: #333333;
-    color: #FFFFFF;
-    opacity: 1;
-    box-shadow: 1px 1px 1px 0 #000000;
-    
-}
-.digito:nth-child(2), .digito:nth-child(3), .digito:nth-child(4){
-    background: #A5A5A5;
-    color: #FFFFFF;
-}
-.digito:nth-child(5), .digito:nth-child(9),.digito:nth-child(13), .digito:nth-child(17), .digito:nth-child(21){
-    background: #FF9201;
-    color: #FFFFFF;
-}
-.digito:nth-child(18){
-    border-radius: 45%;
-    width: 6.1rem;   
-}
-.digito > span{
-    position: relative;
-    right: 2rem;
+  padding-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }

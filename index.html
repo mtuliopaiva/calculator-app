@@ -11,32 +11,31 @@
 <main>
     <h1 class="meuTitulo">Calculator</h1>
     <section class="calculadora">
-        
-        <div class="teclado">
-            <p id="display"></p>
-            <button class="digito" onclick="limpar()">C</button>
-            <button class="digito" value="+/-" onclick="calcular(inserir('*-1'))">+/-</button>
-            <button class="digito" value="%" onclick="calcular(inserir('/100'))">%</button>
-            <button class="digito" value="÷" onclick="inserir('/')">÷</button>
+            <div id ="display">0</div>
+            <div class="teclado">
+                <button class="clear" data-action="clear">AC</button>
+                <button class="invert" data-action="invert">+/-</button>
+                <button class="percentage" data-action="percentage">%</button>
+                <button class="operator" data-action="divide">÷</button>
 
-            <button class="digito" value="7" onclick="inserir('7')">7</button>
-            <button class="digito" value="8" onclick="inserir('8')">8</button>
-            <button class="digito" value="9" onclick="inserir('9')">9</button>
-            <button class="digito" value="x" onclick="inserir('*')">x</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="operator" data-action="multiply">x</button>
 
-            <button class="digito" value="4" onclick="inserir('4')">4</button>
-            <button class="digito" value="5" onclick="inserir('5')">5</button>
-            <button class="digito" value="6" onclick="inserir('6')">6</button>
-            <button class="digito" value="-" onclick="inserir('-')">-</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="operator" data-action="minus">-</button>
 
-            <button class="digito" value="1" onclick="inserir('1')">1</button>
-            <button class="digito" value="2" onclick="inserir('2')">2</button>
-            <button class="digito" value="3" onclick="inserir('3')">3</button>
-            <button class="digito" value="+" onclick="inserir('+')">+</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="operator" data-action="plus">+</button>
 
-            <button class="digito" value="0" onclick="inserir('0')"><span>0</span></button>
-            <button class="digito" value="," onclick="inserir('.')">,</button>
-            <button class="digito" value="=" onclick="calcular()">=</button>
+                <button>0</button>
+                <button data-action="decimal">.</button>
+                <button class="equal" data-action="calculate">=</button>
         </div>
 
     </section>

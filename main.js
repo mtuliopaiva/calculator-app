@@ -1,37 +1,48 @@
-function inserir(num){
-    var numero = document.getElementById('display').innerHTML;
-    document.getElementById('display').innerHTML = numero + num;
-    
-}
+const tela = document.querySelector("#display");
+const tec = document.querySelector('.teclado')
 
-function limpar() {
-    document.getElementById('display').innerHTML = ""
-}
+const limpar = document.querySelector(".clear");
+const inverte = document.querySelector(".invert");
+const porcentagem = document.querySelector(".percentage");
+const operacao = document.querySelectorAll(".operator");
+const dec = document.querySelector(".decimal");
+const igual = document.querySelector(".equal");
 
-function calcular(){
-    var resultado = document.getElementById('display').innerHTML;
-    if(resultado){
-        document.getElementById('display').innerHTML = eval(resultado);
+
+tec.addEventListener('click', event => {
+    if (event.target.matches('button')) {
+        const key = event.target; // Evento.target
+        const action = key.dataset.action;
+        const keyContent = key.textContent;
+        const displayedNum = tela.textContent;
+
+        if(!action) {
+            if (displayedNum === '0') {
+            tela.textContent = keyContent;
+            }
+            else{
+                tela.textContent = displayedNum + keyContent;
+            }
+          }
+        if(action == 'clear'){
+            console.log('clear key!');
+          }
+
+        if(action == 'invert'){
+            console.log('invert key!');
+          }
+        if(action == 'percentage'){
+            console.log('percentage key!');
+          }
+        if(action === 'plus' ||action === 'minus' ||action === 'divide' ||action === 'multiply'){
+            console.log('operator key!');
+        }
+        if(action == 'calculate'){
+            console.log('equal key!');
+        }
+        if(action == 'decimal'){
+            console.log('decimal key!');
+        }
+
     }
-}
-console.log(display);
-
-
-
-
-
-
-
-
-/*for(let i=0 ; i<digitos.length ;i++){
-
-    const tecla = digitos[i];
-
-
-}
-
-/*Todas as funções*/ 
-  /* function clear(){
-        display.value = '';
-    }
-/*resultado = parseFloat(primeiroValor) + parseFloat(segundoValor);     */   
+   })
