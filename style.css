@@ -80,7 +80,7 @@
 }
 /*Visando tamanhos de tela distintos*/
 
-@media screen and (max-width: 480px) { /*Visando celulares*/
+@media screen and (max-width: 550px) { /*Visando celulares*/
   .meuTitulo, .calculadora, .teclado, #display{
     width: auto;
 }
