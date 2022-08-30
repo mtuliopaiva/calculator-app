@@ -80,56 +80,15 @@
 }
 /*Visando tamanhos de tela distintos*/
 
-@media screen and (max-width: 450px) { /*Visando celulares*/
-  .meuTitulo{
-    color: #000000;
-    text-align: center;
-    font-size: 1.875rem;
+@media screen and (max-width: 480px) { /*Visando celulares*/
+  .meuTitulo, .calculadora, .teclado, #display{
+    width: auto;
 }
 .calculadora{
-  width: 50%;
+  margin: 0 10%;
 }
-.icon {
-  width: 15%;
-  height: 15%;
-  background: #FFFFFF;
-}
-#display{
-  font-size: 1.2rem;
-  background-color: #000000;
-  color: #FFFFFF;
-  text-align: right;
-  padding: .5% 1%;
-}
-.teclado{
-  padding: 1% 1%;
-  background-color: #000000;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  
-}
-.teclado button{
-  font-size: 1rem;
-  text-align: center;
-}
-}
-@media screen and (max-width: 1024px) { /*Visando celulares*/
-  .meuTitulo{
-    text-align: center;
-    font-size: 2.3rem;
-}
-.calculadora{
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-  
-}
-.icon {
-  width: 8%;
-  height: 8%;
-  background: #FFFFFF;
-}
+.icon{
+  display:none
 }
 
-
-
+}
