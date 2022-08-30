@@ -85,6 +85,9 @@
   .meuTitulo, .calculadora, main{
     width: auto;
 }
+.meuTitulo{
+  color: yellow;
+}
 .icon{
   display:none
 }
