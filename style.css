@@ -1,26 +1,60 @@
 /*Titulo 2 rem*/
 /*display 1.675 rem rem*/
 /*display 1.325 rem rem*/
-
-
 .meuTitulo{
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.3rem;
+}
+.calculadora{
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  
 }
 #display{
-  font-size: 1.675rem;
+  font-size: 2rem;
   background-color: #000000;
   color: #FFFFFF;
   text-align: right;
-  display: block; /*Para alinhar um input*/
-  margin: 0 auto; /*Para alinhar um input*/
-  width: 25%;
+  padding: .5% 2%;
+  /*display: block; Para alinhar um input*/
+  /*margin: 0 auto; Para alinhar um input*/
+  
 }
 .teclado{
-  padding-top: 1%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
+  padding: 2% 2%;
+  background-color: #000000;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+}
+.teclado button{
+  font-size: 1.675rem;
+  text-align: center;
+}
+.number:nth-child(5), .number:nth-child(6),
+.number:nth-child(7), .number:nth-child(9),
+.number:nth-child(10), .number:nth-child(11), 
+.number:nth-child(13), .number:nth-child(14),
+.number:nth-child(15), .number:nth-child(17), .dec{
+  background: #333333;
+  color: #FFFFFF;
+}
+.number:nth-child(17){
+  text-align: left;
+  grid-column: 1/ span 2; /*Coluna 1 utilizando 2 espaços*/
+}
+
+.clear, .invert, .percentage{
+  background: #A5A5A5;
+  color: #FFFFFF;
+
+}
+.operator, .equal{
+  background: #FF9201;
+  color: #FFFFFF;
+}
+.operator:active{
+  color: #FF9201;
+  background: #FFFFFF;
 }
