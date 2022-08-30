@@ -85,6 +85,9 @@
   .meuTitulo, .calculadora, main{
     width: auto;
 }
+.meuTitulo{
+  color: #000000;
+}
 .calculadora{
   margin: 0 12%;
 }
