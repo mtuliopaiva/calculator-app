@@ -1,6 +1,7 @@
 const tela = document.querySelector("#display");
 const tec = document.querySelector('.teclado')
-const calculator = document.querySelector('.calculadora')
+const calculator = document.querySelector('.calculadora');
+
 
 
 
@@ -35,6 +36,7 @@ tec.addEventListener('click', event => {
             calculator.dataset.firstValue = displayedNum; //criado data atributes first value
             calculator.dataset.operator = action;
             tela.textContent = "0";
+            
         }
         if(action == 'calculate'){
             const firstValue = calculator.dataset.firstValue;
