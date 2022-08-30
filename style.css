@@ -9,6 +9,7 @@
 .meuTitulo{
     text-align: center;
     font-size: 2.3rem;
+    color: #000000;
 }
 .icon {
   width: 5%;
@@ -81,7 +82,7 @@
 /*Visando tamanhos de tela distintos*/
 
 @media screen and (max-width: 700px) { /*Visando celulares*/
-  .meuTitulo, .calculadora, .teclado, #display, main{
+  .meuTitulo, .calculadora, main{
     width: auto;
 }
 .calculadora{
@@ -89,6 +90,12 @@
 }
 .icon{
   display:none
+}
+#display{
+  width: 80%;
+}
+.teclado{
+  width: 80%;
 }
 
 }
