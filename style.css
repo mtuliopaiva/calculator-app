@@ -81,11 +81,8 @@
 /*Visando tamanhos de tela distintos*/
 
 @media screen and (max-width: 700px) { /*Visando celulares*/
-  .meuTitulo, .calculadora, .teclado, #display{
+  .meuTitulo, .calculadora, .teclado, #display, main{
     width: auto;
-}
-.meuTitulo{
-  color: red;
 }
 .calculadora{
   margin: 0 10%;
