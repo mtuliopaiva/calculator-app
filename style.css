@@ -81,10 +81,10 @@
 }
 /*Visando tamanhos de tela distintos*/
 
-@media only screen and (min-width: 320px) and (max-width: 480px){ /*Visando celulares*/
+@media screen and (max-width: 480px){ /*Visando celulares*/
   .meuTitulo, .calculadora{
     margin: 0 10%;
-    width: auto;
+    width: fit-content;
 }
 .icon{
   display:none
