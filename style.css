@@ -84,6 +84,9 @@
   .meuTitulo, .calculadora, .teclado, #display{
     width: auto;
 }
+.meuTitulo{
+  color: red;
+}
 .calculadora{
   margin: 0 10%;
 }
