@@ -81,19 +81,15 @@
 }
 /*Visando tamanhos de tela distintos*/
 
-@media only screen and (min-width: 0px) and (max-width: 600px){ /*Visando celulares*/
-  .meuTitulo, .calculadora, main{
+@media only screen and (min-width: 320px) and (max-width: 480){ /*Visando celulares*/
+  .meuTitulo, .calculadora{
     margin: 0 10%;
     width: auto;
 }
 .icon{
   display:none
 }
-#display{
-  width: 80%;
+.meuTitulo{
+  color: red;
 }
-.teclado{
-  width: 80%;
-}
-
 }
