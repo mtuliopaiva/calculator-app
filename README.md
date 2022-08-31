@@ -14,4 +14,4 @@ Calculator-app é uma aplicação que simula uma calculadora simples com as oper
 
 
 ## Contribuir
-Se você tem alguma ideia, sugestão, ou viu algum erro, você pode me contar aqui (Issues).
+Se você tem alguma ideia, sugestão, ou viu algum erro, você pode me contar [aqui (Issues)](https://github.com/mtuliopaiva/calculator-app/issues).
